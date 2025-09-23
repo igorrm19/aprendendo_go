@@ -39,4 +39,5 @@ func main() {
 	loopsWhile()
 	loopsRange()
 	// loopsInfinito() // cuidado ao descomentar
+
 }
