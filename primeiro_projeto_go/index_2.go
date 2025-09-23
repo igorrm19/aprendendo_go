@@ -2,7 +2,6 @@ package main
 
 import "fmt"
 
-
 func main() {
   a := 10
   b := "Golang"
@@ -13,12 +12,5 @@ func main() {
   fmt.Printf("c: %v, %T\n",c,c)
 
   fmt.Println("Hello word")
-
-  /*
-   a: 10, int
-   b: Golang, string
-   c: true, bool
-   Hello word
-  */
 
 }
