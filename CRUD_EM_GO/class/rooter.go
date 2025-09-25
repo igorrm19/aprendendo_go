@@ -1,6 +1,10 @@
 package roteador
 
-import "github.com/gin-gonic/gin"
+import (
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+)
 
 type Usuario struct {
 	email string
@@ -16,7 +20,12 @@ var r = gin.Default()
 
 func Rota(rota string) {
 	r.GET(rota, func(ctx *gin.Context) {
-		ctx.JSON(200, gin.H{"mensagem": "rota acessada"})
+		data := map[string]interface{}{
+			"email": user.email,
+			"senha": user.senha,
+		}
+		//ctx.JSON(200, gin.H{"mensagem": "rota acessada"})
+		ctx.AsciiJSON(http.StatusOK, data)
 	})
 }
 
