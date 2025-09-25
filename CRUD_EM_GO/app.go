@@ -1,12 +1,14 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	//"CRUD_EM_GO/class"
+
+	roteador "github.com/igorrm19/aprendendo_go/class"
+	config "github.com/igorrm19/aprendendo_go/class/config"
+)
 
 func main() {
-    r := gin.Default()
-    r.GET("/ping", func(c *gin.Context) {
-        c.JSON(200, gin.H{"message": "pong"})
-    })
-	println("Servidor rodando")
-    r.Run()
+	config.DataBeseConfig()
+	roteador.Rota("/root")
+	roteador.Servidor()
 }
