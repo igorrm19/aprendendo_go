@@ -5,7 +5,10 @@ go 1.23.2
 
 require github.com/gin-gonic/gin v1.11.0
 
-require github.com/jackc/puddle/v2 v2.2.2 // indirect
+require (
+	github.com/gorilla/mux v1.8.1 // indirect
+	github.com/jackc/puddle/v2 v2.2.2 // indirect
+)
 
 require (
 	github.com/bytedance/sonic v1.14.0 // indirect
